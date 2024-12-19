@@ -1,0 +1,405 @@
+/****** Home Page *******/
+
+/***** Hero Section Start ******/
+.hero-section {
+    padding: 5px 0 0 0;
+
+    @include screen-768 {
+        padding: 20px 0 50px 0;
+    }
+}
+
+.hero-single {
+    padding: 300px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include screen-992 {
+        padding: 250px 0;
+    }
+
+    @include screen-768 {
+        padding: 200px 0;
+        min-height: 629px;
+        height: 100%;
+    }
+}
+
+.hero-content {
+    text-align: center;
+
+    h2 {
+        color: $white-color;
+        text-shadow: rgba(0, 0, 0, 0.75) 5px 0px 10px;
+        line-height: 63px;
+        letter-spacing: 0;
+        font-size: 53px;
+        transform-origin: 50% 50%;
+        transform: translate(0px, 0px);
+
+        @include screen-992 {
+            font-size: 42px;
+            line-height: 45px;
+        }
+
+        @include portrait-phone {
+            font-size: 40px;
+            line-height: 45px;
+        }
+    }
+}
+
+.hero-slider {
+    position: relative;
+
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        top: 44%;
+        color: $white-color;
+        border-radius: 50%;
+        background-color: $hero-slider-bg;
+        z-index: 1;
+
+        @include large-screen {
+            top: 55%;
+        }
+    }
+
+    .slick-slide {
+        &.slick-active {
+            .hero-content {
+                animation: 1.2s theme_fadeInRight;
+            }
+        }
+    }
+
+    .slick-prev {
+        left: 3%;
+
+        @include screen-768 {
+            left: calc(50% - 52px);
+        }
+    }
+
+    .slick-next {
+        right: 3%;
+
+        @include screen-768 {
+            left: calc(50% + 12px);
+        }
+    }
+}
+
+/***** Hero Section End ******/
+
+/***** About Section Start ******/
+.about-section {
+    position: relative;
+    z-index: 1;
+    margin-top: -200px;
+
+    @include screen-768 {
+        margin-top: 0;
+    }
+}
+
+.about-item {
+    background-color: $secondary-color;
+    padding: 40px 50px 40px 90px;
+    gap: 100px;
+
+    @include screen-992 {
+        display: block !important;
+        padding: 30px;
+    }
+}
+
+.about-thumb {
+    flex-shrink: 0;
+
+    @include screen-992 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.about-content-title {
+    h2 {
+        font-size: 39px;
+        color: $white-color;
+        margin-bottom: 20px;
+    }
+}
+
+.about-content-subtitle {
+    p {
+        color: $white-color;
+    }
+}
+
+/***** About Section End ******/
+
+/***** Expertise Section Start ******/
+.expertise-section {
+    padding: 70px 0 50px 0;
+
+    @include screen-768 {
+        padding: 50px 0;
+    }
+}
+
+.expertise-item {
+    padding: 22px;
+
+    @include screen-992 {
+        padding: 0;
+    }
+}
+
+.expertise-content-title {
+    h2 {
+        color: $primary-color;
+    }
+}
+
+.expertise-content-subtitle {
+    p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/***** Expertise Section End ******/
+
+/***** Map Section Start ******/
+.map-item {
+    background-color: $map-bg;
+    padding: 60px 50px 30px 10px;
+}
+
+.map-content-title {
+    h2 {
+        color: $primary-color;
+    }
+}
+
+.map-content-subtitle {
+    p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.map-btn {
+    padding: 9px 33px !important;
+    border-radius: 4px !important;
+}
+
+/***** Map Section End ******/
+
+/***** Product Section Start ******/
+.product-section {
+    padding: 50px 0 60px 0;
+}
+
+.product-top {
+    h2 {
+        margin-bottom: 60px;
+    }
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-card-title {
+    h6 {
+        margin-top: 15px;
+        line-height: 35px;
+        letter-spacing: -0.25px;
+
+        @include screen-992 {
+            font-size: 17px;
+        }
+
+        @include screen-768 {
+            font-size: 21px;
+        }
+    }
+}
+
+.product-btn {
+    padding: 9px 33px !important;
+}
+
+/***** Product Section End ******/
+
+/***** Banner Section Start ******/
+.banner-item {
+    padding: 150px 0;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-attachment: fixed;
+    text-align: center;
+
+    @include screen-768 {
+        padding: 80px 0 20px 0;
+    }
+}
+
+.banner-title {
+    h1 {
+        color: $white-color;
+        line-height: 1.8em;
+        letter-spacing: 0.6px;
+        font-family: $primary-font;
+
+        @include screen-992 {
+            line-height: 1.4em;
+        }
+
+        @include screen-768 {
+            line-height: 1em;
+        }
+    }
+}
+
+/***** Banner Section End ******/
+
+/***** Contact Section Start ******/
+.contact-item {
+    background-color: $secondary-color;
+    padding: 100px 60px;
+
+    @include screen-992 {
+        padding: 30px;
+    }
+}
+
+.contact-content-title {
+    h2 {
+        color: $white-color;
+    }
+}
+
+.contact-content-subtitle {
+    p {
+        color: $white-color;
+        font-family: $primary-font;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.contact-content-address {
+    h6 {
+        color: $white-color;
+        line-height: 35px;
+        letter-spacing: -0.25px;
+    }
+
+    p {
+        color: $white-color;
+    }
+}
+
+.contact-content-card {
+    margin-top: 30px;
+    gap: 100px;
+
+    @include large-screen {
+        display: block !important;
+    }
+}
+
+.contact-content-phone {
+    h6 {
+        color: $white-color;
+        line-height: 35px;
+        letter-spacing: -0.25px;
+    }
+
+    a {
+        color: $white-color;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        font-family: $paragraph-font;
+    }
+}
+
+.contact-input {
+    input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        background-color: $input-bg;
+        border-color: $input-border-color;
+        color: $input-color;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: $paragraph-font;
+    }
+}
+
+.contact-select {
+    select {
+        width: 100%;
+        padding: 12px 10px;
+        border-radius: 6px;
+        background-color: $input-bg;
+        border-color: $input-border-color;
+        color: $input-color;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: $paragraph-font;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+}
+
+.contact-text {
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        background-color: $input-bg;
+        border-color: $input-border-color;
+        color: $input-color;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: $paragraph-font;
+        outline: 0;
+    }
+}
+
+.contact-submit {
+    input {
+        padding: 14px 51px;
+        border-radius: 6px;
+        background-color: $submit-bg;
+        border-color: $submit-border-color;
+        color: $white-color;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: $main-font;
+        outline: 0;
+        border: 0;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $submit-hover-color;
+            border-color: $submit-border-hover-color;
+        }
+    }
+}
+
+/***** Contact Section End ******/

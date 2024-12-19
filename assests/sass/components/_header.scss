@@ -1,0 +1,163 @@
+/******Header Section Start*********/
+.header-section {
+    background-color: $header-bg;
+    position: relative;
+    z-index: 2;
+    @include screen-1000 {
+        background-color: $common-color !important;
+    }
+}
+
+.header-inner-section {
+    background-color: transparent !important;
+    @include screen-1000 {
+        background-color: $common-color !important;
+    }
+}
+
+.header-inner-left {
+    margin-left: 27px;
+    @include screen-992 {
+        margin-left: 0;
+    }
+}
+
+.header-logo {
+    a {
+        display: inline-block;
+        img {
+            max-width: 244px;
+            width: 100%;
+        }
+    }
+}
+
+.header-nav {
+    @include screen-1000 {
+        display: none;
+    }
+    ul {
+        li {
+            a {
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                line-height: 84px;
+                text-transform: uppercase;
+                color: $white-color;
+                padding: 0 17px;
+                display: inline-block;
+                opacity: 1;
+            }
+            transition: 0.3s;
+            &:hover {
+                a {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+.mobile-toggle {
+    @include screen-1000 {
+        display: block !important;
+    }
+    .header_toggle_btn {
+        transition: 0.3s;
+        span {
+            width: 25px;
+            height: 2px;
+            display: block;
+            background: $white-color;
+        +span {
+            margin-top: 5px;
+        }
+        }
+    }
+}
+
+/******Header Section End*********/
+
+
+/************************ mobile menu start ****************/
+.offcanvas-start {
+    @include portrait-phone {
+        width: 300px !important;
+    }
+}
+.offcanvas-body {
+    padding: 0 !important;
+}
+.mobile-menu {
+    position: relative;
+    background-color: $primary-color;
+    z-index: 10;
+    padding: 60px 24px;
+    overflow-y: scroll;
+    height: 100vh;
+    transition: 0.3s;
+    .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        opacity: 1;
+        color: $secondary-color;
+        padding: 5px;
+        background-size: 12px;
+    }
+    .logo {
+        width: 100%;
+    }
+    .mobile-nav-menu {
+        margin-top: 32px;
+        li {
+            + li {
+                border-top: 1px solid #E8E8E8;
+            }
+            a {
+                display: inline-block;
+                padding: 10px 0;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                line-height: 44px;
+                text-transform: uppercase;
+                color: $white-color;
+            }
+        }
+    }
+    
+}
+
+/************ sticky header ***********/
+.header-sticky {
+    transition: 0.3s;
+    background-color: $header-bg;
+    &.sticky-on {
+        position: fixed;
+        left: 0; 
+        top: 0; 
+        width: 100%;
+        z-index: 50;
+        padding: 5px;
+        animation: 0.3s theme_fadeInDown;
+        background-color: $primary-color !important;
+        .header-logo {
+            a {
+                img {
+                    max-width: 165px;
+                }
+            }
+        }
+        .header-nav {
+            ul {
+                li {
+                    a {
+                        line-height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

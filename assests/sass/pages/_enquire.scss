@@ -1,0 +1,78 @@
+/*************** Enquire page *************/
+
+/************ Enquire Section Start *********/
+.enquire-item {
+    padding: 120px 30px;
+
+    @include screen-768 {
+        padding: 50px 20px;
+    }
+}
+
+.enquire-content {
+    @include screen-992 {
+        margin-bottom: 30px;
+    }
+}
+
+.enquire-content-title {
+    h2 {
+        font-size: 39px;
+        margin-bottom: 20px;
+
+        @include portrait-phone {
+            font-size: 30px;
+            line-height: 35px;
+        }
+    }
+}
+
+.enquire-contact-input {
+    input {
+        color: #4f4f4f !important;
+        background-color: $white-color;
+        transition: 0.3s;
+    }
+}
+
+.enquire-contact-input input:focus {
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+.enquire-contact-select {
+    select {
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+}
+
+.enquire-contact-text {
+    textarea {
+        background-color: transparent;
+    }
+}
+
+.enquire-contact-submit {
+    input {
+        padding: 6px 32px;
+        border-radius: 4px;
+        background-color: $common-color;
+        border-color: $common-color;
+        color: $white-color;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: $main-font;
+        outline: 0;
+        border: 0;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $enquire-submit-hover-color;
+            border-color: $common-color;
+        }
+    }
+}
+
+/*************** Enquire Section End **********/
